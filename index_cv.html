@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sticky navigation - pure CSS - no JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <style>
+            body{
+                margin : 0;
+                padding: 0;
+                font-family: sans serif;
+                background-color: #000;
+                color: #fff;
+            }
+            header {
+                box-sizing: border-box;
+                text-align: center;
+            }
+            section{
+                width: 100%;
+                height: 100vh; 
+
+            }
+            section.sec1{
+                background: url(img1.jpg);
+                background-size: cover;
+            }
+            section.sec2, section.sec4, section.sec6{
+                padding: 100px;
+                box-sizing: border-box;
+                height: auto;
+            }
+            section.sec2 h3, section.sec4 h3, section.sec6 h3{
+                font-size: 3em;
+                margin : 0;
+                padding: 0;
+                color: #fff;
+            }
+            section.sec2 p, section.sec6 p,  section.sec6 p a{
+                font-size: 1.4em;
+                margin : 0;
+                padding: 0;
+                color: #fff;  
+            }
+            section.sec4 ol, section.sec6 ol  {
+                font-size: 1.4em;
+                margin : 0;
+                padding: 0;
+                color: #fff;  
+            }
+            section.sec4 ol li a, section.sec6 ol li a {
+                font-size: 1.4em;
+                margin : 0;
+                padding: 0;
+                color: #fff;  
+            }
+            section.sec3{
+                background: url(img2.jpg);
+                background-size: cover;
+            }
+            section.sec5{
+                background: url(img3.jpg);
+                background-size: cover;
+            }
+
+            /* MENU */
+            nav{
+                width: 100%;
+                height:50px;
+                background: rgba(0,0,0,.8);
+                border-top: 1px solid rgba(255,255,255,.2);
+                border-bottom: 1px solid rgba(255,255,255,.2);
+                /* STICKY effect*/
+                position: sticky;
+                top: 0;
+            }
+            nav ul{
+                display: flex; 
+                margin : 0;
+                padding: 0 100px;
+                float: right;
+            }
+            nav ul li{
+                list-style: none;
+            }
+            nav ul li a{
+                display: block;
+                color: #fff;
+                padding: 0 20px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: bold;  
+                line-height: 50px; /*height de nav*/
+            }
+            nav ul li a.active, nav ul li a:hover{
+                background: teal;
+            }
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <img src="logo.png" alt="logo">
+            <h1>Isabelle NANI</h1>
+            <p>Passionnée, persévérante, créative</p>
+
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">TOP</a></li>
+                <li><a href="#design">Inspiration</a></li>
+                <li><a href="#wix">. . .</a></li>
+            </ul>
+        </nav>
+        <section class="sec1"></section>
+        <section class="sec2">
+            <h2>Mon expérience</h2>
+            <ul>
+                <li><strong>De 2016 à 2019</strong> : Coordinatrice de formations</li>
+                <li><strong>De 2008 à 2014</strong> : Quality officer</li>
+                <li><strong>Avant</strong> : Artiste autodidacte</li>
+            </ul>
+        </section>
+        <section class="sec3"></section>
+        <section class="sec4" id="design">
+            <h2>Mes compétences</h2>
+            <ul>
+                <li>Suite office</li>
+                <li>HTML (en cours)</li>
+                <li>Ponctualité</li>
+            </ul>
+
+            <h2>Ma formation</h2>
+            <ul>
+                <li>La vie</li>
+                <li>Les amis</li>
+                <li>La famille</li>
+                <li>...et sur Internet on trouve le reste</li>
+            </ul>
+
+        </section>
+        <section class="sec5"></section>
+        <section class="sec6" id="wix">
+            <h2>Contact</h2>
+            <a href="mailto:mon@mail.com">Envoyez-moi un email</a>
+            <a href="tel:0499999999">Appelez-moi</a>
+           <a href=" https://api.whatsapp.com/send?phone=32472436380">
+                WhatApp me  
+           </a>
+
+        <!--
+        Credit image 
+        Image by <a href="https://pixabay.com/">Pixabay</a> 
+        -->
+
+    </body>
+</html>
